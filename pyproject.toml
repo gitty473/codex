@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitty473-codex-starter"
+version = "0.1.0"
+description = "Erweiterbare Python-Projektbasis mit einer kleinen Beispiel-CLI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "gitty473" }]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+codex-starter = "codex_starter.cli:main"
+
+[project.urls]
+Repository = "https://github.com/gitty473/codex"
+Issues = "https://github.com/gitty473/codex/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["codex_starter*"]
